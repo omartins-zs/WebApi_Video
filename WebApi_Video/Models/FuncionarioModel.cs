@@ -1,9 +1,11 @@
-﻿using WebApi_Video.Enums;
+﻿using System.ComponentModel.DataAnnotations;
+using WebApi_Video.Enums;
 
 namespace WebApi_Video.Models
 {
     public class FuncionarioModel
     {
+        [Key]
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Sobrenome  { get; set; }
