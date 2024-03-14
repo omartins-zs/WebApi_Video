@@ -4,3 +4,12 @@ Instalar Pacotes do Nuget:
 - Microsoft.EntityFrameworkCore.Design 7.0.9
 - Microsoft.EntityFrameworkCore.Tools 7.0.9
 - Microsoft.EntityFrameworkCore.SqlServer 7.0.9
+
+
+Console de Gerenciador de Pacotes
+
+// Cria uma nova migration ao Projeto
+add-migration first-migration
+
+// Executa a migração no Banco de Dados
+update-database
