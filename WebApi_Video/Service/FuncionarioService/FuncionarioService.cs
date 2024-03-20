@@ -1,4 +1,5 @@
-﻿using WebApi_Video.DataContext;
+﻿using System.Collections.Generic;
+using WebApi_Video.DataContext;
 using WebApi_Video.Models;
 
 namespace WebApi_Video.Service.FuncionarioService
@@ -26,8 +27,25 @@ namespace WebApi_Video.Service.FuncionarioService
             throw new NotImplementedException();
         }
 
-        public Task<ServiceResponse<List<FuncionarioModel>>> GetFuncionarios()
+        public async Task<ServiceResponse<List<FuncionarioModel>>> GetFuncionarios()
         {
+
+            ServiceResponse<List<FuncionarioModel>> serviceResponse = new ServiceResponse<List<FuncionarioModel>>();
+
+            try
+            {
+                serviceResponse.Dados = _context.Funcionarios.ToList();
+            }
+            catch (Exception ex)
+            {
+
+                serviceResponse.Mensagem = ex.Message;
+                serviceResponse.Sucesso = false;
+            }
+
+            return serviceResponse;
+
+
             throw new NotImplementedException();
         }
 

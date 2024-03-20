@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApi_Video.Models;
+using WebApi_Video.Service.FuncionarioService;
 
 namespace WebApi_Video.Controllers
 {
@@ -7,11 +9,17 @@ namespace WebApi_Video.Controllers
     [ApiController]
     public class FuncionarioController : ControllerBase
     {
+        private readonly IFuncionarioInterface _funcionarioInterface;
+        public FuncionarioController(IFuncionarioInterface funcionarioInterface)
+        {
+            _funcionarioInterface = funcionarioInterface;
+        }
 
         [HttpGet]
-        public ActionResult Get()
+        public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> GetFuncionarios()
         {
-            return Ok("OI");
+            return Ok(await _funcionarioInterface.GetFuncionarios());
         }
+        
     }
 }
