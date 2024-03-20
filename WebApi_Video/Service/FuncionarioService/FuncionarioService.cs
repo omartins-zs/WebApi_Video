@@ -1,9 +1,16 @@
-﻿using WebApi_Video.Models;
+﻿using WebApi_Video.DataContext;
+using WebApi_Video.Models;
 
 namespace WebApi_Video.Service.FuncionarioService
 {
     public class FuncionarioService : IFuncionarioInterface
     {
+        private readonly ApplicationDbContext _context;
+        public FuncionarioService(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         public Task<ServiceResponse<List<FuncionarioModel>>> CreateFuncionario(FuncionarioModel novoFuncionario)
         {
             throw new NotImplementedException();

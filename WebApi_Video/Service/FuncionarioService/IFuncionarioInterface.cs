@@ -8,11 +8,7 @@ namespace WebApi_Video.Service.FuncionarioService
         Task<ServiceResponse<List<FuncionarioModel>>> CreateFuncionario(FuncionarioModel novoFuncionario);
         Task<ServiceResponse<List<FuncionarioModel>>> GetFuncionarioById(int id);
         Task<ServiceResponse<List<FuncionarioModel>>> UpdateFuncionario(FuncionarioModel editadoFuncionario);
-        Task<ServiceResponse<List<FuncionarioModel>>> DeleteFuncionario(FuncionarioModel inativaFuncionario);
-        Task<ServiceResponse<List<FuncionarioModel>>> InativaFuncionario(FuncionarioModel inativaFuncionario);
-
-
-
-
+        Task<ServiceResponse<List<FuncionarioModel>>> DeleteFuncionario(int id);
+        Task<ServiceResponse<List<FuncionarioModel>>> InativaFuncionario(int id);
     }
 }
