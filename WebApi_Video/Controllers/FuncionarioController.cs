@@ -34,5 +34,13 @@ namespace WebApi_Video.Controllers
         {
             return Ok(await _funcionarioInterface.CreateFuncionario(novoFuncionario));
         }
+
+        [HttpPut]
+        public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> UpdateFuncionario(FuncionarioModel editadoFuncionario)
+        {
+            ServiceResponse<List<FuncionarioModel>> serviceResponse = await _funcionarioInterface.UpdateFuncionario(editadoFuncionario);
+
+            return Ok(serviceResponse);
+        }
     }
 }
