@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApi_Video")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f41b1429f5f8afd1f712052788da78b3814e90d")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApi_Video")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApi_Video")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
