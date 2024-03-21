@@ -42,5 +42,13 @@ namespace WebApi_Video.Controllers
 
             return Ok(serviceResponse);
         }
+
+        [HttpPut("inativaFuncionario")]
+        public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> InativaFuncionario(int id)
+        {
+            ServiceResponse<List<FuncionarioModel>> serviceResponse = await _funcionarioInterface.InativaFuncionario(id);
+
+            return Ok(serviceResponse);
+        }
     }
 }
